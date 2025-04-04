@@ -21,5 +21,5 @@ modelo.add_cpds(cpd_chuva, cpd_irrigacao, cpd_umidade)
 modelo.check_model()
 
 inferencia = VariableElimination(modelo)
-resultado = inferencia.query(variables=['Umidade'], evidence={'Chuva': 0})
+resultado = inferencia.query(variables=['Umidade'], evidence={'Chuva': 1})
 print(resultado)
